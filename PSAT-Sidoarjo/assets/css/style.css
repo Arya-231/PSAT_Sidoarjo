@@ -1,0 +1,141 @@
+/* NAVBAR STYLE FIX */
+.navbar {
+  background: #f5c518;
+  border-radius: 0 0 30px 30px;
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #2c2c2c !important;
+  margin: 0 12px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #146c2c !important;
+}
+
+/* Hero section fix */
+.hero-section {
+  background: linear-gradient(135deg, #1a8732, #3cb23c);
+  color: white;
+  padding: 30px ;
+  border-radius: 0 0 60px 60px;
+}
+
+.hero-section img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background-color: #c4a100;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+/* Info boxes */
+.info-box {
+  border-radius: 15px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ============================= */
+/* NAVBAR CUSTOM PSAT */
+/* ============================= */
+.navbar-psat {
+  width: 100%;
+  background: linear-gradient(135deg, #1a8732, #3cb23c);
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  background-color: #f5c518;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 44%;
+  padding: 15px 50px;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo tengah */
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5c518;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo-center img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Link style */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1a8732;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-center {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+}
+
