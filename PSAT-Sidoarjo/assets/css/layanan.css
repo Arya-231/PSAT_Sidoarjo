@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #fff1c9, #ffffff);
+}
+
+/* ================= NAVBAR ================= */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navbar-container {
+  background: #f5c518;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  padding: 15px 40px;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5c518;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.logo-center img {
+  width: 60px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  width: 90%;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ================= LAYANAN ================= */
+.layanan-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: linear-gradient(135deg, #0aa14b, #0cc05a);
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Tombol */
+.card button {
+  background: #f5c518;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ffdd55;
+}
+
+/* ✅ Card terakhir di tengah */
+.layanan-wrapper .card:nth-child(5) {
+  grid-column: span 2;
+  width: 50%;
+  margin: auto;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .layanan-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-center {
+    position: static;
+    transform: none;
+  }
+}

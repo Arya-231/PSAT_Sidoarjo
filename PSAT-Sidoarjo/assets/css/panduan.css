@@ -1,0 +1,143 @@
+/* ============================= */
+/* NAVBAR KUNING SAJA */
+/* ============================= */
+
+.navbar-container {
+  background-color: #f5c518;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 44%;
+  padding: 15px 50px;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo tengah */
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5c518;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo-center img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Link kiri & kanan */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1a8732;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-center {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+}
+
+
+* CONTENT */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.left img {
+    width: 280px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.right {
+    margin-left: 50px;
+    width: 400px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* FLIPBOOK */
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#flipbook {
+    height: 80vh;
+}
+
+#flipbook canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#flipbook .page img {
+    width: 100%;
+    height: 100%;
+}
