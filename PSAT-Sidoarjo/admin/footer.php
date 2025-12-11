@@ -26,5 +26,22 @@ function toggleSidebar() {
     document.querySelector(".sidebar-overlay").classList.toggle("active");
 }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const currentPage = window.location.pathname.split("/").pop();
+    const menuItems = document.querySelectorAll(".sidebar a");
+
+    menuItems.forEach(item => {
+        const linkPage = item.getAttribute("href");
+
+        if (currentPage === linkPage) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+});
+</script>
+
 </body>
 </html>

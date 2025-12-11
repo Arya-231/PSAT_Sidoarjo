@@ -134,46 +134,45 @@ body {
     left: 0;
     border-right: 1px solid #e5e5e5;
     box-shadow: 1px 0 8px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
-/* LOGO */
-.sidebar-header {
-    height: 90px;
-    background: #f8f8f8;
+/* Menu Link */
+.sidebar a {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 18px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.sidebar-header img {
-    width: 58px;
-}
-
-/* menu */
-.sidebar a {
-    display: block;
-    padding: 13px 22px;
+    gap: 12px;
+    padding: 12px 18px;
+    margin: 4px 10px;
     color: #333;
+    font-size: 15px;
     font-weight: 500;
+    border-radius: 10px;
     transition: 0.25s ease;
-    border-left: 4px solid transparent;
-    border-radius: 0 6px 6px 0;
+    text-decoration: none;
 }
 
+/* Hover */
 .sidebar a:hover {
-    background: rgba(52, 168, 83, 0.08);
-    color: #34A853;
-    border-left: 4px solid #34A853;
+    background: rgba(52, 168, 83, 0.18);
+    color: #1f6a34;
 }
 
-.sidebar .active {
-    background: rgba(52, 168, 83, 0.13);
-    color: #34A853;
-    border-left: 4px solid #34A853;
+/* Active State */
+.sidebar a.active {
+    background: rgba(52, 168, 83, 0.28);
+    color: #1f6a34;
     font-weight: 600;
+}
+
+.sidebar a.active i {
+    color: #1f6a34;
+}
+
+/* Hover jangan override Active */
+.sidebar a.active:hover {
+    background: rgba(52, 168, 83, 0.33);
 }
 
 /* ============================================
